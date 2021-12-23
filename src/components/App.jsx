@@ -1,8 +1,13 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledDiv = styled.h1`
+  color: purple;
+`;
 
 const App = function App() {
   return (
-    <div> Hello World </div>
+    <StyledDiv> Hello World </StyledDiv>
   );
 };
 
