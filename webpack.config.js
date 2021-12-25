@@ -25,6 +25,13 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.(png|jpg|svg|jpeg|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'public/assets/logos/[hash][ext]',
+        },
+      },
+      {
         test: /\.html$/,
         use: [
           {

@@ -1,13 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const StyledDiv = styled.h1`
-  color: purple;
-`;
+import Layout from '../containers/Layout';
+import Login from '../containers/Login';
+import GlobalStyles from '../GlobalStyles';
 
 const App = function App() {
   return (
-    <StyledDiv> Hello World </StyledDiv>
+    <>
+      <GlobalStyles />
+      <Layout>
+        <Login />
+      </Layout>
+    </>
   );
 };
 
