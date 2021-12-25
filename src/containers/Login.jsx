@@ -77,7 +77,7 @@ const StyledPrimaryButton = styled.input`
   margin-bottom: 30px;
 `;
 
-const Login = function Login() {
+function Login() {
   return (
     <StyledLogin>
       <StyledFormContainer>
@@ -98,6 +98,6 @@ const Login = function Login() {
       </StyledFormContainer>
     </StyledLogin>
   );
-};
+}
 
 export default Login;

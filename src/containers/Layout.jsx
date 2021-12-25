@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const StyledLayout = styled.div``;
 
-const Layout = function Layout({ children }) {
+function Layout({ children }) {
   return <StyledLayout>{children}</StyledLayout>;
-};
+}
 
 Layout.propTypes = {
   children: PropTypes.node,
