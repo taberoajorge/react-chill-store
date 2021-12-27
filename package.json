@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open",
     "build": "webpack --mode production",
-    "lint" : "./node_modules/.bin/eslint"
+    "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,8 @@
     "styled-components": "^5.3.3",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.1"
+    "webpack-dev-server": "^4.7.1",
+    "react-router-dom": "^6.2.1"
   },
   "devDependencies": {
     "babel-loader": "^8.2.3",
@@ -48,6 +49,7 @@
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^1.19.1",
     "prettier-airbnb-config": "^1.0.0",
+    "react-router-dom": "^6.2.1",
     "style-loader": "^3.3.1"
   }
 }
