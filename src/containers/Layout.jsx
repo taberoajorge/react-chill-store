@@ -1,11 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
+import Header from '../components/Header';
 
 const StyledLayout = styled.div``;
 
 function Layout({ children }) {
-  return <StyledLayout>{children}</StyledLayout>;
+  return (
+    <StyledLayout>
+      <Header />
+      {children}
+    </StyledLayout>
+  );
 }
 
 Layout.propTypes = {
