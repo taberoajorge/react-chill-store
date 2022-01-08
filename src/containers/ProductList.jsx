@@ -1,15 +1,21 @@
 import React from 'react';
 import ProductItem from '@components/ProductItem';
 import '@styles/ProductList.scss';
+import axios from 'axios';
 
-const ProductList = () => {
-	return (
-		<section className="main-container">
-			<div className="ProductList">
-				<ProductItem />
-			</div>
-		</section>
-	);
+const URL_API = 'https://api.escuelajs.co/api/v1/';
+
+class productlist extends React.Component {
+	render() {
+		return <INPUT type="text "/>
+	}
 }
 
-export default ProductList;
+1: *****
+1: *****
+2: **
+3: **
+4:
+5: *
+
+export default productlist;

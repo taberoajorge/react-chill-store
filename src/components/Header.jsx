@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import menu from '@icons/icon_menu.svg';
@@ -6,11 +6,11 @@ import logo from '@logos/logo_yard_sale.svg';
 import shoppingCart from '@icons/icon_shopping_cart.svg';
 
 const Header = () => {
-	const [toggle, setToggle] = useState(false);
+	const [toggle, setToggle] = React.useState(false);
 
 	const handleToggle = () => {
 		setToggle(!toggle);
-	}
+	};
 
 	return (
 		<nav>
@@ -49,7 +49,7 @@ const Header = () => {
 					</li>
 				</ul>
 			</div>
-			{toggle && <Menu />}
+			{toggle && <Menu/>}
 		</nav>
 	);
 }
