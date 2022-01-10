@@ -1,21 +1,33 @@
-import React from 'react';
-import ProductItem from '@components/ProductItem';
-import '@styles/ProductList.scss';
-import axios from 'axios';
+import React from "react";
+import ProductItem from "@components/ProductItem";
+import "@styles/ProductList.scss";
+import axios from "axios";
 
-const URL_API = 'https://api.escuelajs.co/api/v1/';
+const URL_API = "https://api.escuelajs.co/api/v1/";
 
-class productlist extends React.Component {
-	render() {
-		return <INPUT type="text "/>
-	}
+function ProductList() {
+  const [productsList, setProductsList] = React.useState([]);
+
+  React.useEffect(() => {
+    axios
+      .get(URL_API + "products")
+      .then((response) => {
+        setProductsList(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+
+  return (
+    <section className="main-container">
+      <div className="ProductList">
+        {productsList.map((product) => (
+          <ProductItem key={product.id} product={product} />
+        ))}
+      </div>
+    </section>
+  );
 }
 
-1: *****
-1: *****
-2: **
-3: **
-4:
-5: *
-
-export default productlist;
+export default ProductList;
