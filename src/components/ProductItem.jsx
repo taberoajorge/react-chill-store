@@ -5,18 +5,17 @@ import AppContext from '../context/AppContext';
 
 const ProductItem = (props) => {
 	const {addToCart} = React.useContext(AppContext);
-	const {title, price, images} = props.product;
-	const handleClick = (product) => {
-		addToCart(product)
+	const handleClick = () => {
+		addToCart(props.product)
 	}
 
 	return (
 		<div className="ProductItem">
-			<img src={images[0]} alt="" />
+			<img src={props.product.images[0]} alt="" />
 			<div className="product-info">
 				<div>
-					<p>{`$${price}`}</p>
-					<p>{title}</p>
+					<p>{`$${props.product.price}`}</p>
+					<p>{props.product.title}</p>
 				</div>
 				<figure onClick={(e)=>handleClick(e)} >
 					<img src={addToCartIcon} alt="" />
